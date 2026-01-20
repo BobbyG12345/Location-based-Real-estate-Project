@@ -128,7 +128,7 @@ function ListingDetail() {
       async function GetProfileInfo() {
         try {
           const response = await Axios.get(
-            `http://http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/profiles/${state.listingInfo.seller}/`,
+            `http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/profiles/${state.listingInfo.seller}/`,
           );
           dispatch({
             type: "catchSellerProfileInfo",
@@ -178,7 +178,7 @@ function ListingDetail() {
       }
       try {
         const response = await Axios.delete(
-          `http://http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com//api/listings/${params.id}/delete/`,
+          `http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/listings/${params.id}/delete/`,
         );
         console.log(response.data);
         dispatch({ type: "openTheSnack" });
