@@ -111,7 +111,7 @@ function ListingDetail() {
     async function GetListingInfo() {
       try {
         const response = await Axios.get(
-          `http://http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/listings/${params.id}/`,
+          `http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/listings/${params.id}/`,
         );
         dispatch({ type: "catchListingInfo", listingObject: response.data });
 
