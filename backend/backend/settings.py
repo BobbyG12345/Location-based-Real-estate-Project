@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     "bobbyguanproject1.com",
-    "http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com",
+    "ec2-3-101-103-116.us-west-1.compute.amazonaws.com",
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
