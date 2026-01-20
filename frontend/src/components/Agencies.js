@@ -57,7 +57,7 @@ function Agencies() {
     async function GetAgencies() {
       try {
         const response = await Axios.get(
-          `http://http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com//api/profiles/`,
+          `http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/profiles/`,
         );
         dispatch({ type: "catchAgencies", agenciesArray: response.data });
         dispatch({ type: "loadingDone" });
