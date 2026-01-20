@@ -56,7 +56,9 @@ function Agencies() {
   useEffect(() => {
     async function GetAgencies() {
       try {
-        const response = await Axios.get(`http://localhost:8000/api/profiles/`);
+        const response = await Axios.get(
+          `http://http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com//api/profiles/`,
+        );
         dispatch({ type: "catchAgencies", agenciesArray: response.data });
         dispatch({ type: "loadingDone" });
         // console.log("response", response);

@@ -111,7 +111,7 @@ function ListingDetail() {
     async function GetListingInfo() {
       try {
         const response = await Axios.get(
-          `http://localhost:8000/api/listings/${params.id}/`
+          `http://http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com//api/listings/${params.id}/`,
         );
         dispatch({ type: "catchListingInfo", listingObject: response.data });
 
@@ -128,7 +128,7 @@ function ListingDetail() {
       async function GetProfileInfo() {
         try {
           const response = await Axios.get(
-            `http://localhost:8000/api/profiles/${state.listingInfo.seller}/`
+            `http://http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/profiles/${state.listingInfo.seller}/`,
           );
           dispatch({
             type: "catchSellerProfileInfo",
@@ -171,14 +171,14 @@ function ListingDetail() {
   function DeleteHandler() {
     async function DeleteListing() {
       const confirmDelete = window.confirm(
-        "Are you sure you want to delete this listing?"
+        "Are you sure you want to delete this listing?",
       );
       if (!confirmDelete) {
         return;
       }
       try {
         const response = await Axios.delete(
-          `http://localhost:8000/api/listings/${params.id}/delete/`
+          `http://http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com//api/listings/${params.id}/delete/`,
         );
         console.log(response.data);
         dispatch({ type: "openTheSnack" });
@@ -538,7 +538,7 @@ function ListingDetail() {
                   Math.sin(latitude1) * Math.sin(latitude2) +
                     Math.cos(latitude1) *
                       Math.cos(latitude2) *
-                      Math.cos(lonDiff)
+                      Math.cos(lonDiff),
                 ) * R;
               return dist.toFixed(2);
             }
