@@ -120,8 +120,8 @@ function Listings() {
     async function GetAllListings() {
       try {
         const response = await Axios.get(
-          "http://127.0.0.1:8000/api/listings/",
-          { cancelToken: source.token }
+          "http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/listings/",
+          { cancelToken: source.token },
         );
 
         console.log(response.data);
@@ -169,7 +169,7 @@ function Listings() {
                     onClick={() =>
                       state.mapInstance.flyTo(
                         [listing.latitude, listing.longitude],
-                        16
+                        16,
                       )
                     }
                   >
