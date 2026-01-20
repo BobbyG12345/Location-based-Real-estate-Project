@@ -116,8 +116,8 @@ function ProfileUpdate(props) {
 
         try {
           const response = await Axios.patch(
-            `http://localhost:8000/api/profiles/${GlobalState.userId}/update/`,
-            formData
+            `http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/profiles/${GlobalState.userId}/update/`,
+            formData,
           );
           console.log(response.data);
 

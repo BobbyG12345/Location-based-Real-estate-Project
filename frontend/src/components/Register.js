@@ -112,7 +112,7 @@ function Register() {
       case "catchEmailErrors":
         if (
           !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-            action.emailChosen
+            action.emailChosen,
           )
         ) {
           draft.emailErrors.hasErrors = true;
@@ -174,7 +174,7 @@ function Register() {
       async function SignUp() {
         try {
           const response = await Axios.post(
-            "http://localhost:8000/api-auth-djoser/users/",
+            "http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api-auth-djoser/users/",
             {
               username: state.usernameValue,
               email: state.emailValue,
@@ -183,7 +183,7 @@ function Register() {
             },
             {
               cancelToken: source.token,
-            }
+            },
           );
 
           dispatch({ type: "openTheSnack" });

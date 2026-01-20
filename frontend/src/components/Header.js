@@ -48,9 +48,11 @@ function Header() {
     if (confirmLogout) {
       try {
         const response = await Axios.post(
-          "http://localhost:8000/api-auth-djoser/token/logout/",
+          "http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api-auth-djoser/token/logout/",
           GlobalState.userToken,
-          { headers: { Authorization: "Token ".concat(GlobalState.userToken) } }
+          {
+            headers: { Authorization: "Token ".concat(GlobalState.userToken) },
+          },
         );
         GlobalDispatch({ type: "logout" });
         console.log("response", response);

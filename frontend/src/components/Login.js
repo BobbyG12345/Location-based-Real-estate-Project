@@ -91,14 +91,14 @@ function Login() {
       async function SignIn() {
         try {
           const response = await Axios.post(
-            "http://localhost:8000/api-auth-djoser/token/login/",
+            "http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api-auth-djoser/token/login/",
             {
               username: state.usernameValue,
               password: state.passwordValue,
             },
             {
               cancelToken: source.token,
-            }
+            },
           );
 
           dispatch({
@@ -129,13 +129,13 @@ function Login() {
       async function GetUserInfo() {
         try {
           const response = await Axios.get(
-            "http://localhost:8000/api-auth-djoser/users/me/",
+            "http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api-auth-djoser/users/me/",
             {
               headers: { Authorization: "Token ".concat(state.token) },
             },
             {
               cancelToken: source.token,
-            }
+            },
           );
 
           GlobalDispatch({

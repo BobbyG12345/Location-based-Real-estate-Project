@@ -78,7 +78,7 @@ function AgencyDetail() {
     async function GetProfileInfo() {
       try {
         const response = await Axios.get(
-          `http://localhost:8000/api/profiles/${params.id}/`
+          `http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/profiles/${params.id}/`,
         );
         dispatch({ type: "catchUserProfileInfo", profileInfo: response.data });
         dispatch({ type: "loadingDone" });

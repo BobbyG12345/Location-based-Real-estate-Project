@@ -280,8 +280,8 @@ function ListingUpdate(props) {
         }
         try {
           const response = await Axios.patch(
-            `http://localhost:8000/api/listings/${props.listingData.id}/update/`,
-            formData
+            `http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com/api/listings/${props.listingData.id}/update/`,
+            formData,
           );
           console.log(response.data);
           dispatch({ type: "openTheSnack" });
