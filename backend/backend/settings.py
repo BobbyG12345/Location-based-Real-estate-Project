@@ -26,8 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "EC2_PUBLIC_IP",
+    "127.0.0.1",
+    "localhost",
     "bobbyguanproject1.com",
+    "http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com",
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
@@ -40,9 +42,6 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 SECRET_KEY = 'django-insecure-kq!x==asxcqaokteb7r5)fp#)c!xl$eb)_40a+g)n7aq*4#67a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
