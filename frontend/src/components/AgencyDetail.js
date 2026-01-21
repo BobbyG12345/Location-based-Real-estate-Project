@@ -196,8 +196,8 @@ function AgencyDetail() {
                 <CardMedia
                   height="140"
                   image={
-                    `http://localhost:8000${listing.picture1}`
-                      ? `http://localhost:8000${listing.picture1}`
+                    `http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com${listing.picture1}`
+                      ? `http://ec2-3-101-103-116.us-west-1.compute.amazonaws.com${listing.picture1}`
                       : defaultProfilePicture
                   }
                   alt="Property Picture"
